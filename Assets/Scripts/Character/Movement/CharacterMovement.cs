@@ -1,13 +1,15 @@
 using UnityEngine;
 
-namespace Halloween.Movement
+namespace Halloween.Character.Movement
 {
+    [RequireComponent(typeof(CharacterAnimations))]
+    [RequireComponent(typeof(CharacterFlipper))]
     [RequireComponent(typeof(Rigidbody2D))]
     public sealed class CharacterMovement : MonoBehaviour
     {
         [SerializeField] private float _speed = 100f;
         private Rigidbody2D _rigidbody;
-    
+        
         private CharacterAnimations _characterAnimations;
         private CharacterFlipper _characterFlipper;
 
@@ -24,11 +26,11 @@ namespace Halloween.Movement
 
             if (_rigidbody.velocity == Vector2.zero)
             {
-                _characterAnimations.SetIdleAnimation();
+                _characterAnimations.EnableIdleAnimations();
                 return;
             }
         
-            _characterAnimations.SetRunAnimation();
+            _characterAnimations.EnableRunAnimations();
             if (_rigidbody.velocity.x > 0)
             {
                 _characterFlipper.FlipRight();
