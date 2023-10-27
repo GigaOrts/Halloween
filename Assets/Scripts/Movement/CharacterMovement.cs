@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 namespace Halloween.Movement
 {
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(CharacterAnimations))]
+    [RequireComponent(typeof(CharacterFlipper))]
     public sealed class CharacterMovement : MonoBehaviour
     {
         [SerializeField] private float _speed = 100f;
