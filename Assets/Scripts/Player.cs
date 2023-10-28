@@ -8,10 +8,10 @@ namespace Halloween
         [SerializeField] private Character.Character _character;
         [SerializeField] private CharacterMovementInput _characterMovementInput;
         
-        private void Update()
+        private void FixedUpdate()
         {
-            if (_characterMovementInput.MovingValueX != 0f)
-                _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
+            Debug.Log(_characterMovementInput.MovingValueX);
+            _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
         }
     }
 }
