@@ -25,7 +25,7 @@ namespace Halloween.Character.Movement
 
         public void Move(Vector2 direction)
         {
-            _rigidbody.velocity = Time.deltaTime * _speed * direction.normalized;
+            _rigidbody.velocity = new Vector2(_speed * direction.normalized.x, _rigidbody.velocity.y);
 
             if (_rigidbody.velocity == Vector2.zero)
             {
