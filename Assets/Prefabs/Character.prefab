@@ -297,13 +297,14 @@ GameObject:
   - component: {fileID: 5729697931278310733}
   - component: {fileID: 6219139412797370216}
   - component: {fileID: 1434748632934618235}
+  - component: {fileID: 1015098903158881493}
   m_Layer: 8
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5729697931278310733
 Transform:
   m_ObjectHideFlags: 0
@@ -351,9 +352,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.67, y: -0.24}
+  m_Offset: {x: 0.5513828, y: -0.24000001}
   serializedVersion: 2
-  m_Radius: 0.44
+  m_Radius: 0.32138276
 --- !u!114 &1434748632934618235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +368,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+--- !u!114 &1015098903158881493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641086628510928819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403a64e01c85463180835a3493fb9623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _strength: 4
+  _knockTimeInSeconds: 0.3
 --- !u!1 &8514414264811757156
 GameObject:
   m_ObjectHideFlags: 0
