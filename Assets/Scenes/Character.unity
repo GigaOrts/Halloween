@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &627455468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 773309798660804833, guid: 81bf3012d2b122f47b0acc9e6c88125b, type: 3}
+  m_PrefabInstance: {fileID: 1666135195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d04df0da72343799155523f9ede22bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634185506
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986652133}
   - component: {fileID: 986652132}
+  - component: {fileID: 986652134}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -259,6 +271,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1166836828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986652134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986652131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be734f2dc831405dab73f7b80b644037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995279000
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,8 +312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95021606609e4015b83451e1080384ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 1666135196}
+  _character: {fileID: 627455468}
   _characterMovementInput: {fileID: 986652132}
+  _characterJumpingInput: {fileID: 986652134}
 --- !u!4 &995279002
 Transform:
   m_ObjectHideFlags: 0
@@ -349,7 +374,7 @@ GameObject:
   - component: {fileID: 1254422332}
   - component: {fileID: 1254422331}
   - component: {fileID: 1254422333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,10 +501,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5077066491574761846, guid: 81bf3012d2b122f47b0acc9e6c88125b, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5143854593679167694, guid: 81bf3012d2b122f47b0acc9e6c88125b, type: 3}
       propertyPath: m_Name
       value: Character
@@ -529,17 +550,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81bf3012d2b122f47b0acc9e6c88125b, type: 3}
---- !u!114 &1666135196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 581713753846243815, guid: 81bf3012d2b122f47b0acc9e6c88125b, type: 3}
-  m_PrefabInstance: {fileID: 1666135195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d04df0da72343799155523f9ede22bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

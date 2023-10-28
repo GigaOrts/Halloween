@@ -6,11 +6,20 @@ namespace Halloween
     public sealed class Player : MonoBehaviour
     {
         [SerializeField] private Character.Character _character;
+        
+        [Space]
         [SerializeField] private CharacterMovementInput _characterMovementInput;
+        [SerializeField] private CharacterJumpingInput _characterJumpingInput;
         
         private void Update()
         {
             _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
+            
+            if (_characterJumpingInput.JumpButtonPressedThisFrame)
+                _character.StartJump();
+            
+            if (_characterJumpingInput.JumpButtonReleasedThisFrame)
+                _character.EndJump();
         }
     }
 }
