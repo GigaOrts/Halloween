@@ -10,6 +10,7 @@ namespace Halloween.Character
         [Space]
         [SerializeField] private CharacterMovementInput _characterMovementInput;
         [SerializeField] private CharacterJumpingInput _characterJumpingInput;
+        [SerializeField] private CharacterAttackInput _characterAttackInput;
         
         private void Update()
         {
@@ -20,6 +21,9 @@ namespace Halloween.Character
             
             if (_characterJumpingInput.JumpButtonReleasedThisFrame)
                 _character.EndJump();
+            
+            if (_characterAttackInput.IsAttackPressedThisFrame)
+                _character.Attack();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Halloween.Character
                 return;
             
             _rigidbody.velocity = Vector2.zero;
-            _characterAnimations.EnableDeathAnimation();
+            _characterAnimations.PlayDeathAnimation();
         }
     }
 }

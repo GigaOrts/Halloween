@@ -8,14 +8,16 @@ namespace Halloween.Character
     [RequireComponent(typeof(IHealth))]
     public sealed class Character : MonoBehaviour
     {
+        private IHealth _health;
         private CharacterJumping _characterJumping;
         private CharacterMovement _characterMovement;
-        private IHealth _health;
+        private CharacterAttacking _characterAttacking;
 
         private void Awake()
         {
             _characterJumping = GetComponent<CharacterJumping>();
             _characterMovement = GetComponent<CharacterMovement>();
+            _characterAttacking = GetComponent<CharacterAttacking>();
             _health = GetComponent<IHealth>();
         }
 
@@ -25,6 +27,12 @@ namespace Halloween.Character
                 _characterMovement.Move(direction);
         }
 
+        public void Attack()
+        {
+            if (_health.IsAlive)
+                _characterAttacking.Attack();
+        }
+        
         public void StartJump()
         {
             if (_health.IsAlive)
