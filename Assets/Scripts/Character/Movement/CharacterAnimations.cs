@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Halloween.Character.Movement
+namespace Halloween.Character
 {
     [RequireComponent(typeof(Animator))]
     public sealed class CharacterAnimations : MonoBehaviour
