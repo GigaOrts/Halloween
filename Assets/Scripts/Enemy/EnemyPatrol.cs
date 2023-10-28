@@ -1,5 +1,4 @@
-﻿using System;
-using Halloween.Movement;
+﻿using Halloween.Character.Movement;
 using UnityEngine;
 
 namespace Halloween.Enemy
