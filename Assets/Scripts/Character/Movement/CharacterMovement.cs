@@ -25,7 +25,7 @@ namespace Halloween.Character
         public void Move(Vector2 direction)
         {
             _rigidbody.velocity = new Vector2(_speed * direction.normalized.x, _rigidbody.velocity.y);
-
+            
             if (direction.normalized.x == 0.0f)
             {
                 _characterAnimations.EnableIdleAnimations();

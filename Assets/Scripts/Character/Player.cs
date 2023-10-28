@@ -1,11 +1,11 @@
 ﻿using Halloween.Input;
 using UnityEngine;
 
-namespace Halloween
+namespace Halloween.Character
 {
     public sealed class Player : MonoBehaviour
     {
-        [SerializeField] private Character.Character _character;
+        [SerializeField] private Character _character;
         
         [Space]
         [SerializeField] private CharacterMovementInput _characterMovementInput;

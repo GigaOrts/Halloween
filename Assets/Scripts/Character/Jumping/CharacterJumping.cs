@@ -13,8 +13,6 @@ namespace Halloween.Character
         
         public void StartJump()
         {
-            Debug.Log(_isCharacterGrounded.Get());
-            
             if (_isCharacterGrounded.Get())
                 _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpForce);
         }
