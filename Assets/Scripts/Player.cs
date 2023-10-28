@@ -10,8 +10,7 @@ namespace Halloween
         
         private void Update()
         {
-            if (_characterMovementInput.MovingValueX != 0f)
-                _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
+            _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
         }
     }
 }
