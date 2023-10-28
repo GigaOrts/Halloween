@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Halloween.Movement
+namespace Halloween.Character.Movement
 {
     public sealed class CharacterFlipper : MonoBehaviour
     {
