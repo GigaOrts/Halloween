@@ -1,4 +1,4 @@
-﻿using Halloween.Character.Movement;
+﻿using Halloween.Character;
 using UnityEngine;
 
 namespace Halloween.Enemy
@@ -22,7 +22,6 @@ namespace Halloween.Enemy
         private void FixedUpdate()
         {
             Vector2 direction = _flipper.IsFlippedLeft ? Vector2.left : Vector2.right;
-
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, _raycastDistance, _obstacleLayerMask);
 
             if (hit.collider) 
