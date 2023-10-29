@@ -22,8 +22,11 @@ namespace Halloween.Character
             _isOpenExitMenu = !_exitGameScreen.activeSelf;
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0;
                 _exitGameScreen.SetActive(true);
-
+            }
+            
             if (_isOpenExitMenu)
                 _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
 

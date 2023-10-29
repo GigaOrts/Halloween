@@ -26,7 +26,10 @@ namespace Halloween
         private void OnButtonClickYes() => 
             Application.Quit();
 
-        private void OnButtonClickNo() => 
+        private void OnButtonClickNo()
+        {
+            Time.timeScale = 1;
             _exitGameScreen.SetActive(false);
+        }
     }
 }
