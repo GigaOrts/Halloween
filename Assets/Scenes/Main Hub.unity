@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 996366328}
   - component: {fileID: 996366327}
   m_Layer: 0
-  m_Name: KazinoTrigger
+  m_Name: CasinoTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,9 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c2db3ea9fe4046b3aee5d84bd1ded5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maskCharacter:
-    serializedVersion: 2
-    m_Bits: 512
+  _sceneIndex: 2
 --- !u!61 &996366328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1476,7 +1474,7 @@ GameObject:
   - component: {fileID: 1454674417}
   - component: {fileID: 1454674416}
   - component: {fileID: 1454674418}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3111,7 +3109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479595851}
   - component: {fileID: 1479595850}
-  - component: {fileID: 1479595849}
+  - component: {fileID: 1479595852}
   m_Layer: 0
   m_Name: LevelTrigger
   m_TagString: Untagged
@@ -3119,21 +3117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1479595849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479595848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3ce8c03432fc4b47b3742bf79d53d8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maskCharacter:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!61 &1479595850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3194,6 +3177,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479595852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479595848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c2db3ea9fe4046b3aee5d84bd1ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneIndex: 1
 --- !u!1 &1688520870
 GameObject:
   m_ObjectHideFlags: 0

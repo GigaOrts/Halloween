@@ -2,18 +2,21 @@ using UnityEngine;
 
 namespace Halloween.Interactions
 {
-    public class SlotMachine : MonoBehaviour
+    public sealed class SlotMachine : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [SerializeField] private InteractingZone _interactingZone;
 
-        // Update is called once per frame
-        void Update()
+        [Space]
+        [SerializeField] private Wallet.Wallet _wallet;
+        [SerializeField] private int _bid;
+
+        private void Update()
         {
-        
+            if (!_interactingZone.IsCharacterInZone || _wallet.Coins < _bid * 2 || !UnityEngine.Input.GetKeyDown(KeyCode.E)) 
+                return;
+            
+            var multiplier = Random.Range(0, 2) == 0 ? -2 : 1;
+            _wallet.AddCoins(_bid * multiplier);
         }
     }
 }
