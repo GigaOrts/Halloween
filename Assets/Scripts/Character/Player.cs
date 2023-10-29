@@ -38,7 +38,6 @@ namespace Halloween.Character
 
             if (_characterAttackInput.IsAttackPressedThisFrame && _isClosedExitMenu)
                 _character.Attack();
-
         }
     }
 }
