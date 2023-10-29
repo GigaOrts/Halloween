@@ -5,6 +5,9 @@ namespace Halloween.Character
 {
     public sealed class Player : MonoBehaviour
     {
+        [SerializeField] private GameObject _exitGameScreen;
+
+        [Space]
         [SerializeField] private Character _character;
         
         [Space]
@@ -24,6 +27,9 @@ namespace Halloween.Character
             
             if (_characterAttackInput.IsAttackPressedThisFrame)
                 _character.Attack();
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape)) 
+                _exitGameScreen.SetActive(true);
         }
     }
 }
