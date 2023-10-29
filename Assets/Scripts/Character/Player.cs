@@ -15,11 +15,11 @@ namespace Halloween.Character
         [SerializeField] private CharacterJumpingInput _characterJumpingInput;
         [SerializeField] private CharacterAttackInput _characterAttackInput;
 
-        private bool _isOpenExitMenu = false;
+        private bool _isClosedExitMenu;
 
         private void Update()
         {
-            _isOpenExitMenu = !_exitGameScreen.activeSelf;
+            _isClosedExitMenu = !_exitGameScreen.activeSelf;
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
             {
@@ -27,16 +27,16 @@ namespace Halloween.Character
                 _exitGameScreen.SetActive(true);
             }
             
-            if (_isOpenExitMenu)
+            if (_isClosedExitMenu)
                 _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
 
-            if (_characterJumpingInput.JumpButtonPressedThisFrame && _isOpenExitMenu)
+            if (_characterJumpingInput.JumpButtonPressedThisFrame && _isClosedExitMenu)
                 _character.StartJump();
 
-            if (_characterJumpingInput.JumpButtonReleasedThisFrame && _isOpenExitMenu)
+            if (_characterJumpingInput.JumpButtonReleasedThisFrame && _isClosedExitMenu)
                 _character.EndJump();
 
-            if (_characterAttackInput.IsAttackPressedThisFrame && _isOpenExitMenu)
+            if (_characterAttackInput.IsAttackPressedThisFrame && _isClosedExitMenu)
                 _character.Attack();
 
         }
