@@ -13605,7 +13605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455513628388192560, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
       propertyPath: _jumpForce
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5802614083785112453, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
       propertyPath: m_AnchorMax.y
