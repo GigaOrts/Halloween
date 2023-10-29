@@ -1,5 +1,7 @@
-﻿using Halloween.Health;
+﻿using System.Collections;
+using Halloween.Health;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Halloween.Character
 {
@@ -32,6 +34,13 @@ namespace Halloween.Character
             _rigidbody.velocity = Vector2.zero;
             _characterAnimations.PlayDeathAnimation();
             PlayerPrefs.SetInt(_valueSaveName, _healthValue);
+            StartCoroutine(ReloadScene());
+        }
+
+        private IEnumerator ReloadScene()
+        {
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void Awake()

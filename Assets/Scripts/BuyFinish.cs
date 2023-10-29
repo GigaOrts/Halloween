@@ -21,7 +21,7 @@ namespace Halloween
 
         private void Update()
         {
-            if (_interactingZone.IsCharacterInZone && _wallet.Coins >= 2 && UnityEngine.Input.GetKeyDown(KeyCode.E))
+            if (_interactingZone.IsCharacterInZone && _wallet.Coins >= 200 && UnityEngine.Input.GetKeyDown(KeyCode.E))
             {
                 if (isPressed)
                     return;
