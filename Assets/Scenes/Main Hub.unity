@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 627389552}
   - component: {fileID: 627389551}
   - component: {fileID: 627389553}
+  - component: {fileID: 627389554}
   m_Layer: 0
   m_Name: BuyTrigger
   m_TagString: Untagged
@@ -957,7 +958,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e72a7759429ad4cab398413d8fd065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewCost: {fileID: 1227905470}
+  _interactingZone: {fileID: 627389554}
+  _wallet: {fileID: 855131235}
+--- !u!114 &627389554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627389550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011c0b6d73385614ea16164a9c842193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonImage: {fileID: 1227905470}
 --- !u!1001 &855131233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,6 +1102,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7146220703138885272, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
   m_PrefabInstance: {fileID: 855131233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &855131235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7945150306037666025, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
+  m_PrefabInstance: {fileID: 855131233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519661644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dff4e80e644eb5bcf81e40ae0a2964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &855131250
 MonoBehaviour:
   m_ObjectHideFlags: 0
