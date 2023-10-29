@@ -2,8 +2,13 @@
 {
     public sealed class Health : IHealth
     {
-        public Health(int value) 
-            => Value = value;
+        private readonly IHealthView _healthView;
+        
+        public Health(IHealthView healthView, int value)
+        {
+            _healthView = healthView;
+            Value = value;
+        }
 
         public int Value { get; private set; }
 
@@ -16,6 +21,8 @@
 
             if (Value < 0)
                 Value = 0;
+            
+            _healthView.Display(Value);
         } 
     }
 }

@@ -23,6 +23,6 @@ namespace Halloween.Enemy
         }
 
         private void Awake()
-            => _health = new Health.Health(_healthValue);
+            => _health = new Health.Health(new EnemyHealthView(), _healthValue);
     }
 }
