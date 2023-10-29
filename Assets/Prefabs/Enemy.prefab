@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b890db6c543c4ae6aff4d9b69217b2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthValue: 2
+  _healthValue: 4
   _coinPrefab: {fileID: 4635103681492386220, guid: 1a19e89303a91f145a373b8cda096940, type: 3}
 --- !u!114 &5866316882348614773
 MonoBehaviour:
