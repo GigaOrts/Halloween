@@ -13,6 +13,7 @@ namespace Halloween.Character
         [SerializeField] private HealthView _healthView;
         
         private IHealth _health;
+        private const string _valueSaveName = "CharacterHealth"; 
         
         public int Value 
             => _health.Value;
@@ -23,15 +24,20 @@ namespace Halloween.Character
         public void TakeDamage(int damage)
         {
             _health.TakeDamage(damage);
-
+            PlayerPrefs.SetInt(_valueSaveName, Value);
+            
             if (IsAlive) 
                 return;
             
             _rigidbody.velocity = Vector2.zero;
             _characterAnimations.PlayDeathAnimation();
+            PlayerPrefs.SetInt(_valueSaveName, _healthValue);
         }
 
-        private void Awake() 
-            => _health = new Health.Health(_healthView, _healthValue);
+        private void Awake()
+        {
+            var initialHealth = PlayerPrefs.HasKey(_valueSaveName) ? PlayerPrefs.GetInt(_valueSaveName) : _healthValue;
+            _health = new Health.Health(_healthView, initialHealth);
+        }
     }
 }
