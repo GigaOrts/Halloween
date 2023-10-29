@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Halloween
+namespace Halloween.Level
 {
     public class ExitGame : MonoBehaviour
     {
@@ -23,8 +23,8 @@ namespace Halloween
             _buttonNo.onClick.RemoveListener(OnButtonClickNo);
         }
 
-        private void OnButtonClickYes() => 
-            Application.Quit();
+        private void OnButtonClickYes() 
+            => Application.Quit();
 
         private void OnButtonClickNo()
         {
