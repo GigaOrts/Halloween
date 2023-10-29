@@ -1578,7 +1578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1800633178, guid: ca56f95ae17392840a9b1bd4b262ec9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1661,7 +1661,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: f933af88485852b4a983495a8ec781e9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af4265659664fc38c44a82c6a6abae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 9
+  _jumpForce: 15
 --- !u!114 &3844647252602675096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53432c2329fcb684998aa357bc2a08ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
+  _speed: 7
 --- !u!114 &8190218569142974291
 MonoBehaviour:
   m_ObjectHideFlags: 0
