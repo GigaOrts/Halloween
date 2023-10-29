@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Halloween.Character
 {
@@ -16,15 +17,27 @@ namespace Halloween.Character
             => _animator = GetComponent<Animator>();
 
         public void EnableIdleAnimations()
-            => _animator.SetTrigger(IDLE_TRIGGER_HASH);
-    
+        {
+            if (_animator.parameters.Any(parameter => parameter.type == AnimatorControllerParameterType.Trigger && parameter.name == "Idle"))
+                _animator.SetTrigger(IDLE_TRIGGER_HASH);
+        }
+
         public void EnableRunAnimations()
-            => _animator.SetTrigger(RUN_TRIGGER_HASH);
-        
+        {
+            if (_animator.parameters.Any(parameter => parameter.type == AnimatorControllerParameterType.Trigger && parameter.name == "Run"))
+                _animator.SetTrigger(RUN_TRIGGER_HASH);
+        }
+
         public void PlayDeathAnimation()
-            => _animator.SetTrigger(DEATH_TRIGGER_HASH);
-        
+        {
+            if (_animator.parameters.Any(parameter => parameter.type == AnimatorControllerParameterType.Trigger && parameter.name == "Death")) 
+                _animator.SetTrigger(DEATH_TRIGGER_HASH);
+        }
+
         public void SetAttackBool(bool active)
-            => _animator.SetBool(ATTACK_BOOL_HASH, active);
+        {
+            if (_animator.parameters.Any(parameter => parameter.type == AnimatorControllerParameterType.Bool && parameter.name == "Attack"))
+                _animator.SetBool(ATTACK_BOOL_HASH, active);
+        }
     }
 }
