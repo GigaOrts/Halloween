@@ -12,5 +12,11 @@ namespace Halloween.Character
             if (other.TryGetComponent(out IHealth health) && health.IsAlive) 
                 health.TakeDamage(_damage);
         }
+        
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.TryGetComponent(out IHealth health) && health.IsAlive) 
+                health.TakeDamage(_damage);
+        }
     }
 }

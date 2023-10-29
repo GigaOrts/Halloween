@@ -1,3 +1,4 @@
+using Halloween.Knockback;
 using UnityEngine;
 
 namespace Halloween.Character
@@ -11,12 +12,14 @@ namespace Halloween.Character
     {
         [SerializeField] private float _speed = 100f;
         private Rigidbody2D _rigidbody;
-        
+
+        private Knockable _knockable;
         private CharacterAnimations _characterAnimations;
         private CharacterFlipper _characterFlipper;
 
         private void Awake()
         {
+            _knockable = GetComponent<Knockable>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _characterAnimations = GetComponent<CharacterAnimations>();
             _characterFlipper = GetComponent<CharacterFlipper>();
@@ -24,6 +27,9 @@ namespace Halloween.Character
 
         public void Move(Vector2 direction)
         {
+            if (_knockable.IsKnocking)
+                return;
+            
             _rigidbody.velocity = new Vector2(_speed * direction.normalized.x, _rigidbody.velocity.y);
             
             if (direction.normalized.x == 0.0f)

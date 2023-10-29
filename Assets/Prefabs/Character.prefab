@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 6902708867873888789}
   - component: {fileID: 5738476846606816865}
   - component: {fileID: 7139232960664728703}
+  - component: {fileID: 2917680789872966513}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -286,6 +287,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackColliderGameObject: {fileID: 5641086628510928819}
+--- !u!114 &2917680789872966513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143854593679167694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d9d3a1de9b4157bbf45c2b74d163ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5641086628510928819
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,9 +365,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5513828, y: -0.24000001}
+  m_Offset: {x: 0.597263, y: -0.24000001}
   serializedVersion: 2
-  m_Radius: 0.32138276
+  m_Radius: 0.36726296
 --- !u!114 &1434748632934618235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,8 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403a64e01c85463180835a3493fb9623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 4
-  _knockTimeInSeconds: 0.3
+  _strength: 18
+  _knockTimeInSeconds: 0.2
 --- !u!1 &8514414264811757156
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using Halloween.Health;
+﻿using System.Collections;
+using Halloween.Health;
 using UnityEngine;
 
 namespace Halloween.Character
@@ -7,7 +8,7 @@ namespace Halloween.Character
     {
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private CharacterAnimations _characterAnimations;
-        private readonly IHealth _health = new Health.Health(1);
+        private readonly IHealth _health = new Health.Health(5);
         
         public int Value 
             => _health.Value;
