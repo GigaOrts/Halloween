@@ -15,7 +15,7 @@ namespace Halloween.Health
             _hearts.ForEach(heart => heart.sprite = _emptyHeartSprite);
 
             for (var i = 0; i < health; i++) 
-                _hearts[0].sprite = _fullHeartSprite;
+                _hearts[i].sprite = _fullHeartSprite;
         }
     }
 }

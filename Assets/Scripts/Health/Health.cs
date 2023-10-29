@@ -8,6 +8,8 @@
         {
             _healthView = healthView;
             Value = value;
+            
+            _healthView.Display(value);
         }
 
         public int Value { get; private set; }

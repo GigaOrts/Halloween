@@ -208,6 +208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 5077066491574761846}
   _characterAnimations: {fileID: 6902708867873888789}
+  _healthValue: 3
+  _healthView: {fileID: 0}
 --- !u!114 &1420871699378838646
 MonoBehaviour:
   m_ObjectHideFlags: 0
