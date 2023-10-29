@@ -13624,10 +13624,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2612145346816912510, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
-      propertyPath: _speed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4455513628388192560, guid: 844c846066da98b44ad3b23bfa1fb960, type: 3}
       propertyPath: _jumpForce
       value: 15
