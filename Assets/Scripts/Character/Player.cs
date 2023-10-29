@@ -28,8 +28,11 @@ namespace Halloween.Character
             if (_characterAttackInput.IsAttackPressedThisFrame)
                 _character.Attack();
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape)) 
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0;
                 _exitGameScreen.SetActive(true);
+            }
         }
     }
 }
