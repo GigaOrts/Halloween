@@ -9,27 +9,33 @@ namespace Halloween.Character
 
         [Space]
         [SerializeField] private Character _character;
-        
+
         [Space]
         [SerializeField] private CharacterMovementInput _characterMovementInput;
         [SerializeField] private CharacterJumpingInput _characterJumpingInput;
         [SerializeField] private CharacterAttackInput _characterAttackInput;
-        
+
+        private bool _isOpenExitMenu = false;
+
         private void Update()
         {
-            _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
-            
-            if (_characterJumpingInput.JumpButtonPressedThisFrame)
+            _isOpenExitMenu = !_exitGameScreen.activeSelf;
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+                _exitGameScreen.SetActive(true);
+
+            if (_isOpenExitMenu)
+                _character.Move(new Vector2(_characterMovementInput.MovingValueX, 0));
+
+            if (_characterJumpingInput.JumpButtonPressedThisFrame && _isOpenExitMenu)
                 _character.StartJump();
-            
-            if (_characterJumpingInput.JumpButtonReleasedThisFrame)
+
+            if (_characterJumpingInput.JumpButtonReleasedThisFrame && _isOpenExitMenu)
                 _character.EndJump();
-            
-            if (_characterAttackInput.IsAttackPressedThisFrame)
+
+            if (_characterAttackInput.IsAttackPressedThisFrame && _isOpenExitMenu)
                 _character.Attack();
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape)) 
-                _exitGameScreen.SetActive(true);
         }
     }
 }
