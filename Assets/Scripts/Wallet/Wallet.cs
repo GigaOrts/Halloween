@@ -5,32 +5,32 @@ namespace Halloween.Wallet
     public class Wallet : MonoBehaviour
     {
         [SerializeField] private WalletView _walletView;
-        
-        private int _coins ;
         private const string _coinsSaveName = "PlayerCoins";
+        
+        public int Coins { get; private set; }
 
         private void Awake()
         {
-            _coins = PlayerPrefs.HasKey(_coinsSaveName) ? PlayerPrefs.GetInt(_coinsSaveName) : 0; 
-            _walletView.Display(_coins);
+            Coins = PlayerPrefs.HasKey(_coinsSaveName) ? PlayerPrefs.GetInt(_coinsSaveName) : 0; 
+            _walletView.Display(Coins);
         }
 
         public void AddCoins(int amount)
         {
-            _coins += amount;
-            _walletView.Display(_coins);
-            PlayerPrefs.SetInt(_coinsSaveName, _coins);
+            Coins += amount;
+            _walletView.Display(Coins);
+            PlayerPrefs.SetInt(_coinsSaveName, Coins);
         }
 
         public void WithdrawCoins(int amount)
         {
-            _coins -= amount;
+            Coins -= amount;
 
-            if (_coins < 0)
-                _coins = 0;
+            if (Coins < 0)
+                Coins = 0;
             
-            _walletView.Display(_coins);
-            PlayerPrefs.SetInt(_coinsSaveName, _coins);
+            _walletView.Display(Coins);
+            PlayerPrefs.SetInt(_coinsSaveName, Coins);
         }
     }
 }
