@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 5738476846606816865}
   - component: {fileID: 7139232960664728703}
   - component: {fileID: 2917680789872966513}
-  m_Layer: 0
+  - component: {fileID: 3035534250238200055}
+  m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,6 +302,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d9d3a1de9b4157bbf45c2b74d163ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3035534250238200055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143854593679167694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dff4e80e644eb5bcf81e40ae0a2964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walletView: {fileID: 0}
 --- !u!1 &5641086628510928819
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,8 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403a64e01c85463180835a3493fb9623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 18
-  _knockTimeInSeconds: 0.2
+  _strength: 27
+  _knockTimeInSeconds: 0.1
 --- !u!1 &8514414264811757156
 GameObject:
   m_ObjectHideFlags: 0

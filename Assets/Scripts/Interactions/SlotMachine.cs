@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Halloween
+namespace Halloween.Interactions
 {
     public class SlotMachine : MonoBehaviour
     {

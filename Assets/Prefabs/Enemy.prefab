@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthValue: 3
+  _coinPrefab: {fileID: 4635103681492386220, guid: 1a19e89303a91f145a373b8cda096940, type: 3}
 --- !u!114 &5866316882348614773
 MonoBehaviour:
   m_ObjectHideFlags: 0
